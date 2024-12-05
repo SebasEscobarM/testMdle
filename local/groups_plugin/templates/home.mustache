@@ -1,0 +1,66 @@
+<div id="carouselImages" class="carousel slide modern-carousel" data-bs-ride="carousel" data-bs-interval="10000">
+    <div class="carousel-inner">
+        {{#images}}
+            {{#url}}
+            <div class="carousel-item {{#isfirst}}active{{/isfirst}}">
+                <img src="{{url}}" class="d-block w-100" alt="Imagen" loading="lazy">
+            </div>
+            {{/url}}
+        {{/images}}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<div class="modern-container">
+    <!-- About section -->
+    <div class="modern-section">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <img src="{{imageDescription}}" alt="Logo" class="img-fluid modern-image" loading="lazy">
+            </div>
+            <div class="col-md-8">
+                <h2 class="modern-title">¿QUÉ ES EL NODO DE INNOVACIÓN ECONÓMICA?</h2>
+                <p class="modern-text">{{description}}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories section -->
+    <div class="modern-categories">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="category-card">
+                    <h4>EDUCACIÓN</h4>
+                    <p>{{education}}</p>
+                    <a href="{{educationurl}}" class="modern-button">OFERTA EDUCATIVA</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <h4>COLABORACIÓN</h4>
+                    <p>{{collaboration}}</p>
+                    <a href="{{collaborationurl}}" class="modern-button">INICIATIVAS</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <h4>INVESTIGACIÓN</h4>
+                    <p>{{research}}</p>
+                    <a href="{{researchurl}}" class="modern-button">PUBLICACIONES</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="category-card">
+                    <h4>IA</h4>
+                    <p>{{ai}}</p>
+                    <a href="{{aiurl}}" class="modern-button">CONOCE NODUS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

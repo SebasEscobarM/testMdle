@@ -1,0 +1,89 @@
+<div class="initiatives-container">
+
+    <!-- Secondary Navigation -->
+    <div class="secondary-nav">
+        <div class="nav-items">
+            <a href="#" class="nav-item active">INICIATIVAS</a>
+            <a href="#" class="nav-item">GRUPOS DE COLABORACIÓN</a>
+            <a href="#" class="nav-item">DIRECTORIO</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="initiatives-content">
+        <!-- Left Sidebar -->
+        <div class="filters-sidebar">
+            <!-- Search by Theme -->
+            <div class="filter-group">
+                <h3>BÚSQUEDA POR TEMA</h3>
+                {{#themeFilters}}
+                <div class="filter-item">
+                    <input type="checkbox" id="{{id}}" name="{{name}}">
+                    <label for="{{id}}">{{label}}</label>
+                </div>
+                {{/themeFilters}}
+            </div>
+
+            <!-- Search by Profile -->
+            <div class="filter-group">
+                <h3>BÚSQUEDA POR PERFIL</h3>
+                {{#profileFilters}}
+                <div class="filter-item">
+                    <input type="checkbox" id="{{id}}" name="{{name}}">
+                    <label for="{{id}}">{{label}}</label>
+                </div>
+                {{/profileFilters}}
+            </div>
+
+            <!-- Search by Type -->
+            <div class="filter-group">
+                <h3>BÚSQUEDA POR TIPO</h3>
+                {{#typeFilters}}
+                <div class="filter-item">
+                    <input type="checkbox" id="{{id}}" name="{{name}}">
+                    <label for="{{id}}">{{label}}</label>
+                </div>
+                {{/typeFilters}}
+            </div>
+
+            <!-- Search by Ally -->
+            <div class="filter-group">
+                <h3>BÚSQUEDA POR ALIADO</h3>
+                {{#allyFilters}}
+                <div class="filter-item">
+                    <input type="checkbox" id="{{id}}" name="{{name}}">
+                    <label for="{{id}}">{{label}}</label>
+                </div>
+                {{/allyFilters}}
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Search and Actions Bar -->
+            <div class="actions-bar">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar iniciativas...">
+                    <button class="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+                <div class="action-buttons">
+                    <a href="{{addInitiativeUrl}}" class="add-button">
+                        <i class="fa fa-plus"></i> AGREGAR UNA INICIATIVA
+                    </a>
+                    <a href="{{editInitiativesUrl}}" class="edit-button">
+                        <i class="fa fa-edit"></i> EDITAR MIS INICIATIVAS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Initiatives Grid -->
+            <div class="initiatives-grid">
+                {{#initiatives}}
+                    {{> local_groups_plugin/initiative_card}}
+                {{/initiatives}}
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,21 @@
+<div class="course-card">
+    <div class="card-image">
+        <img src="{{image}}" alt="{{title}}" loading="lazy">
+    </div>
+    <div class="card-content">
+        <h3 class="card-title">{{title}}</h3>
+        {{#subtitle}}<h4 class="card-subtitle">{{subtitle}}</h4>{{/subtitle}}
+        {{#details}}
+        <div class="card-details">
+            {{#.}}
+            <p><strong>{{label}}:</strong> {{value}}</p>
+            {{/.}}
+        </div>
+        {{/details}}
+        <div class="card-actions">
+            {{#actions}}
+            <a href="{{url}}" class="card-button {{class}}">{{text}}</a>
+            {{/actions}}
+        </div>
+    </div>
+</div> 

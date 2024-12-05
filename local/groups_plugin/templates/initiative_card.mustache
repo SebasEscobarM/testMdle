@@ -1,0 +1,20 @@
+<div class="initiative-card">
+    <div class="initiative-image">
+        <img src="{{image}}" alt="{{title}}" loading="lazy">
+    </div>
+    <div class="initiative-content">
+        <h3 class="initiative-title">{{title}}</h3>
+        {{#allies}}
+        <div class="initiative-allies">
+            <strong>ALIADOS:</strong> {{allies}}
+        </div>
+        {{/allies}}
+        {{#description}}
+        <div class="initiative-description">
+            <strong>DESCRIPCIÓN:</strong>
+            <p>{{description}}</p>
+        </div>
+        {{/description}}
+        <a href="{{contactUrl}}" class="contact-button">CONTÁCTANOS</a>
+    </div>
+</div> 

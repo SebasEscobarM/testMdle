@@ -1,0 +1,74 @@
+<div class="module-container">
+    <!-- Back Button and Header -->
+    <div class="module-header">
+        <a href="{{backurl}}" class="back-button">
+            <i class="fa fa-arrow-left"></i> ATRÁS
+        </a>
+    </div>
+
+    <!-- Module Description -->
+    {{#description}}
+    <div class="module-description">
+        <p>{{description}}</p>
+    </div>
+    {{/description}}
+
+    <!-- Search and Actions Bar -->
+    <div class="search-actions-bar">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="{{searchPlaceholder}}">
+            <button class="search-button">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="action-buttons">
+            {{#canAdd}}
+            <button class="add-button">
+                <i class="fa fa-plus"></i> {{addButtonText}}
+            </button>
+            {{/canAdd}}
+            {{#canEdit}}
+            <button class="edit-button">
+                <i class="fa fa-edit"></i> {{editButtonText}}
+            </button>
+            {{/canEdit}}
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="module-content">
+        <!-- Left Sidebar Filters -->
+        <div class="filters-sidebar">
+            {{#filterGroups}}
+            <div class="filter-group">
+                <h3>{{groupTitle}}</h3>
+                {{#filters}}
+                <div class="filter-item">
+                    <input type="checkbox" id="{{id}}" name="{{name}}">
+                    <label for="{{id}}">{{label}}</label>
+                </div>
+                {{/filters}}
+            </div>
+            {{/filterGroups}}
+        </div>
+
+        <!-- Main Content Cards -->
+        <div class="cards-container">
+            {{#items}}
+                {{> local_groups_plugin/course_card}}
+            {{/items}}
+        </div>
+
+        {{#showPartnerLogos}}
+        <!-- Partner Logos Section -->
+        <!--<div class="partners-section">
+            <h3>{{partnerSectionTitle}}</h3>
+            <div class="partner-logos">
+                {{#partners}}
+                <img src="{{logo}}" alt="{{name}}" class="partner-logo">
+                {{/partners}}
+            </div>
+        </div>-->
+        {{/showPartnerLogos}}
+    </div>
+</div> 
